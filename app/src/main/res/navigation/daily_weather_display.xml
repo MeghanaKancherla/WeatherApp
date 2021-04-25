@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/daily_weather_display"
+    app:startDestination="@id/weatherFragment">
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.capgemini.weatherforecastapp.view.WeatherFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_weatherFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.capgemini.weatherforecastapp.view.WeatherDetailsFragment"
+        android:label="WeatherDetailsFragment" />
+    <fragment
+        android:id="@+id/hourlyForecastList2"
+        android:name="com.capgemini.weatherforecastapp.view.HourlyForecastList"
+        android:label="fragment_hourly_forecast_list"
+        tools:layout="@layout/fragment_hourly_forecast_list" />
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="com.capgemini.weatherforecastapp.view.CurrentWeatherFragment"
+        android:label="CurrentWeatherFragment" />
+</navigation>
